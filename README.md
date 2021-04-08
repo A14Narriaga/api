@@ -1,2 +1,2 @@
 # API
- Implement a Website with and API using SASS and Typescript.
+ Implement a Website with and API using SCSS and Typescript.
