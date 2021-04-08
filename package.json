@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "0.0.1",
+  "description": "Implement a Website with and API using SASS and Typescript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A14Narriaga/API.git"
+  },
+  "author": "Alan Arriaga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A14Narriaga/API/issues"
+  },
+  "homepage": "https://github.com/A14Narriaga/API#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
