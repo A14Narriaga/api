@@ -4,7 +4,8 @@
   "description": "Implement a Website with and API using SASS and Typescript with Parcel.",
   "browserslist": "> 0.2%",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "parcel build ./code/app.ts",
+    "sassw": "npx node-sass --watch sass/style.scss -o css"
   },
   "repository": {
     "type": "git",
