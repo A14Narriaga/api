@@ -2,7 +2,6 @@
   "name": "api",
   "version": "1.0.0",
   "description": "Implement a Website with and API using SASS and Typescript with Parcelv2.",
-  "main": "index.js",
   "scripts": {
     "dev": "parcel code/index.html",
     "build": "parcel build code/index.html"
@@ -23,5 +22,10 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-beta.2"
+  },
+  "targets": {
+    "app": {
+      "distDir": "./public"
+    }
   }
 }

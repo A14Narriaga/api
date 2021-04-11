@@ -25,9 +25,18 @@ npm install parcel@next
     "build": "parcel build code/index.html"
   },
 ```
-- npm run dev
+- Add targets in package.json:
 ```
+"targets": {
+    "app": {
+      "distDir": "./public"
+    }
+  }
+```
+- npm run dev (Development)
+- npm run build (For final project)
 
 # Directories of the project
 - code: principal files
-- dist: result of Parcelv2 compilation
+- dist: result of Parcelv2 compilation (dev)
+- public: result of Parcelv2 compilation (build)
