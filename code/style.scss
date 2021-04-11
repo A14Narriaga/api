@@ -1,4 +1,61 @@
-body {
-    background-color: aqua;
+$background-color: whitesmoke;
+$nav-color: rgba(29, 170, 163, 0.678);
+$content-width: 1024px;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: $background-color;
+
+  .header-container {
+    background-color: $nav-color;
+
+    header {
+      max-width: $content-width;
+      margin: 0 auto;
+      display: flex;
+      padding: 1rem 0;
+      align-items: center;
+
+      .logo {
+        background-color: $background-color;
+        border-radius: 99rem;
+        padding: 0.8rem 0.8rem 0.3rem 0.8rem;
+        margin-right: 1rem;
+
+        img {
+          max-width: 4rem;
+        }
+      }
+    }
+  }
+
+  .container {
+    max-width: $content-width;
+    margin: 0 auto;
+    main {
+        #cards {
+            background-color: blue;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .card {
+                background-color: red;
+                width: 31%;
+                display: flex;
+                .title {
+                    display: flex;
+                }
+                img {
+                    max-width: 10rem;
+                }
+            }
+        }
+    }
+  }
 }
