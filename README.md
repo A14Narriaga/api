@@ -3,9 +3,15 @@
 
 # Comands
 - Install nodejs (https://nodejs.org/en/)
-- npm init name -y
-- npm install parcel@next
-- add browserslist in package.json:
+- Create a proyect
+```
+npm init -y
+```
+- Install Parcelv2
+```
+npm install parcel@next
+```
+- Add browserslist in package.json:
 ```
   "name": "",
   "version": "",
@@ -15,21 +21,13 @@
 - Add scripts in package.json:
 ```
 "scripts": {
-    "build": "parcel build ./code/app.ts"
-  
+    "dev": "parcel code/index.html",
+    "build": "parcel build code/index.html"
   },
 ```
-- Add targets in package.json:
+- npm run dev
 ```
-"targets": {
-    "app": {
-      "distDir": "./public"
-    }
-  }
-```
-- npm run buid
 
 # Directories of the project
 - code: principal files
-- - app.ts file to compile in build (importing the sass files)
-- public: result of Parcelv2 compilation
+- dist: result of Parcelv2 compilation

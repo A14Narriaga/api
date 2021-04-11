@@ -1,32 +1,27 @@
 {
   "name": "api",
-  "version": "0.0.1",
-  "description": "Implement a Website with and API using SASS and Typescript with Parcel.",
-  "browserslist": "> 0.2%",
+  "version": "1.0.0",
+  "description": "Implement a Website with and API using SASS and Typescript with Parcelv2.",
+  "main": "index.js",
   "scripts": {
-    "build": "parcel build ./code/app.ts",
-    "sassw": "npx node-sass --watch code/style.scss -o code"
+    "dev": "parcel code/index.html",
+    "build": "parcel build code/index.html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/A14Narriaga/API.git"
   },
-  "author": "Alan Arriaga",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/A14Narriaga/API/issues"
   },
   "homepage": "https://github.com/A14Narriaga/API#readme",
-  "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.0-beta.2",
-    "node-sass": "^5.0.0"
-  },
   "dependencies": {
     "parcel": "^2.0.0-beta.2"
   },
-  "targets": {
-    "app": {
-      "distDir": "./public"
-    }
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.2"
   }
 }
