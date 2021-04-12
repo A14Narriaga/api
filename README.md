@@ -7,9 +7,9 @@ Helps to compile all the code of the app and give
 new files that will be understanding for the most 
 of the browsers.
 
-# Comands
+# For development
 - Install nodejs: https://nodejs.org/en/
-- Create a proyect
+- Create a proyect.
 ```
 npm init -y
 ```
@@ -28,7 +28,26 @@ npm install parcel@next
 ```
 "scripts": {
     "dev": "parcel code/index.html",
-    "build": "parcel build code/index.html"
+  },
+```
+- Create the directory "code" and insert all the files to create the aplication. (.html, .sass, .ts)
+- npm run dev (Development).
+- Parcel create the "dist" directory and start a server.
+
+# For production
+- Delete de "dist" directory.
+- Create the directory "public" and insert all the source files (img, etc...).
+- Move the index.html to the root.
+  - Link the css and js file.
+  ```
+  <link rel="stylesheet" href="./public/app.css">
+  <script type="text/javascript" src="./public/app.js"></script>
+  ```
+  - Fix sources paths.
+- Add scripts in package.json:
+```
+"scripts": {
+    "build": "parcel build ./code/app.ts"
   },
 ```
 - Add targets in package.json:
@@ -39,11 +58,4 @@ npm install parcel@next
     }
   }
 ```
-- npm run dev (Development)
-- npm run build (For final project)
-- npm install axios
-
-# Directories of the project
-- code: principal files
-- dist: result of Parcelv2 compilation (dev)
-- public: result of Parcelv2 compilation (build)
+- npm run build (For production)
