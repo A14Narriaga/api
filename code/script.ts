@@ -1,6 +1,10 @@
 import "./style.scss"
 
 const cards = document.getElementById('cards') as HTMLElement
+const body = document.body as HTMLElement
+const btn = document.getElementById('theme-toggler') as HTMLElement
+const themeLocal = localStorage.getItem('theme')
+if(themeLocal === 'dark') body.classList.add('dark')
 
 const callAPI = async () => {
     const getData = await fetch('https://www.breakingbadapi.com/api/characters')
@@ -30,6 +34,11 @@ const createCard = ({img,name,status,nickname,birthday,occupation,portrayed}): s
     </section>
     `
 }
+
+btn.addEventListener('click', (): void => {
+    body.classList.toggle('dark')
+    localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light') 
+})
 
 callAPI()
 
