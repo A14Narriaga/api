@@ -1,6 +1,11 @@
-# API
+# API App
  Implement a Website with and API using SASS and Typescript with Parcelv2.
  The API that i use: https://breakingbadapi.com/
+
+ # Parcel (Blender)
+Helps to compile all the code of the app and give 
+new files that will be understanding for the most 
+of the browsers.
 
 # Comands
 - Install nodejs: https://nodejs.org/en/
