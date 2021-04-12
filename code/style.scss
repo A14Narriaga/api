@@ -67,6 +67,7 @@ body {
           border-top: 1px solid rgba(255, 255, 255, 0.5);
           backdrop-filter: blur(5px);
           z-index: 0;
+          height: 10.5rem;
           // Glass card
           cursor: none;
           display: flex;
@@ -85,13 +86,15 @@ body {
               line-height: 1.1rem;
             }
           }
-          img {
-            border-radius: 1rem 0 0 1rem;
-            max-width: 7rem;
-            margin-right: 0.5rem;
-          }
-          &:hover {
-            background-color: $select-color;
+          .img-content {
+            img {
+              border-radius: 1rem 0 0 1rem;
+              max-width: 7rem;
+              height: 100%;
+            }
+            &:hover {
+              background-color: $select-color;
+            }
           }
         }
       }
