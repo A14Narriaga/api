@@ -18,12 +18,14 @@ const createCard = ({img,name,status,nickname,birthday,occupation,portrayed}): s
         <div class="content">
             <div class="title">
                 <h1>${name}</h1>
-                <span>${(status === 'Alive') ? "✅" : "❎"}</span>
+                <span>${(status === 'Alive') ? "🤍" : "💀"}</span>
             </div>
-            <h2>${nickname}</h2>
-            <p>${birthday}</p>
-            <p>${occupation}</p>
-            <p>${portrayed}</p>
+            <div class="info">
+                <p>Nickname: ${nickname}</p>
+                <p>Birthday: ${birthday}</p>
+                <p>Occupation: ${occupation}</p>
+                <p>Portrayed: ${portrayed}</p>
+            </div>
         </div>
     </section>
     `

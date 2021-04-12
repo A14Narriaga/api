@@ -1,5 +1,5 @@
 $background-color: whitesmoke;
-$nav-color: rgba(29, 170, 163, 0.678);
+$nav-color: rgb(29, 170, 163);
 $content-width: 1024px;
 
 * {
@@ -11,25 +11,23 @@ $content-width: 1024px;
 
 body {
   background-color: $background-color;
-
   .header-container {
     background-color: $nav-color;
-
+    position: fixed;
+    width: 100%;
     header {
       max-width: $content-width;
       margin: 0 auto;
       display: flex;
-      padding: 1rem 0;
+      justify-content: space-between;
+      padding: 0.5rem 0;
       align-items: center;
-
       .logo {
         background-color: $background-color;
         border-radius: 99rem;
-        padding: 0.8rem 0.8rem 0.3rem 0.8rem;
-        margin-right: 1rem;
-
+        padding: 0.5rem 0.4rem 0.1rem 0.5rem;
         img {
-          max-width: 4rem;
+          max-width: 2rem;
         }
       }
     }
@@ -38,24 +36,51 @@ body {
   .container {
     max-width: $content-width;
     margin: 0 auto;
+    padding: 5rem 0 1rem 0;
     main {
-        #cards {
-            background-color: blue;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            .card {
-                background-color: red;
-                width: 31%;
-                display: flex;
-                .title {
-                    display: flex;
-                }
-                img {
-                    max-width: 10rem;
-                }
+      #cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+        gap: 1rem;
+        .card {
+          background-color: $nav-color;
+          border-radius: 1rem;
+          display: flex;
+          .content {
+            width: 100%;
+            padding: 1rem;
+            font-size: 0.8rem;
+            .title {
+              display: flex;
+              justify-content: space-between;
+              padding: 0 0 0.4rem 0;
+              border-bottom: 1px solid black;
+              margin-bottom: 0.4rem;
             }
+            .info {
+              line-height: 1.1rem;
+            }
+          }
+          img {
+            border-radius: 1rem 0 0 1rem;
+            max-width: 7rem;
+            margin-right: 0.5rem;
+          }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    .header-container {
+      header {
+        padding: 0.5rem 1rem;
+      }
+    }
+    .container {
+      padding: 5.7rem 1rem 1rem 1rem;
     }
   }
 }

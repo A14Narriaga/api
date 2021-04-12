@@ -1,8 +1,9 @@
 # API
  Implement a Website with and API using SASS and Typescript with Parcelv2.
+ The API that i use: https://breakingbadapi.com/
 
 # Comands
-- Install nodejs (https://nodejs.org/en/)
+- Install nodejs: https://nodejs.org/en/
 - Create a proyect
 ```
 npm init -y
