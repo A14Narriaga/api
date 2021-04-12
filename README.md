@@ -41,6 +41,7 @@ npm install parcel@next
 ```
 - npm run dev (Development)
 - npm run build (For final project)
+- npm install axios
 
 # Directories of the project
 - code: principal files

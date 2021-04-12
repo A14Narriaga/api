@@ -1,4 +1,5 @@
 import "./style.scss"
+// import 'regenerator-runtime/runtime'
 
 const cards = document.getElementById('cards') as HTMLElement
 const body = document.body as HTMLElement
@@ -41,5 +42,3 @@ btn.addEventListener('click', (): void => {
 })
 
 callAPI()
-
-
