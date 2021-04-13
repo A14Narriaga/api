@@ -1,10 +1,10 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "Implement a Website with and API using SASS and Typescript with Parcelv2.",
+  "description": "Implement a Website with and API using SASS and Typescript with Parcel.",
   "scripts": {
-    "dev": "parcel code/index.html",
-    "build": "parcel build ./code/app.ts"
+    "dev": "parcel ./code/index.html -p 3001",
+    "pro": "parcel build ./code/index.html && python ./build-script.py"
   },
   "repository": {
     "type": "git",
@@ -29,8 +29,5 @@
     "app": {
       "distDir": "./public"
     }
-  },
-  "browserslist": [
-    "since 2017-06"
-  ]
+  }
 }

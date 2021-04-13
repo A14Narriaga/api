@@ -1,15 +1,9 @@
-$content-width: 1024px;
-// Theme light
+@import "mixins";
+
 $background-color: linear-gradient(#90f1a0,#78e98b);
 $primary-color: #90f1a0;
 $select-color: rgba(255, 255, 255, 0.829);
 $nav-color: rgb(39, 46, 44);
-// Theme dark
-$background-color-dark: linear-gradient(#242924,#0a0a0a);
-$primary-color-dark: #468A43;
-$select-color-dark: rgba(255, 255, 255, 0.1);
-$nav-color-dark:  rgb(10, 10, 10);
-$text-color: rgba(212, 212, 212, 0.774);
 
 * {
   margin: 0;
@@ -27,8 +21,7 @@ body {
     z-index: 1;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
     header {
-      max-width: $content-width;
-      margin: 0 auto;
+      @include size-center;
       display: flex;
       justify-content: space-between;
       padding: 0.5rem 0;
@@ -51,8 +44,7 @@ body {
     }
   }
   .container {
-    max-width: $content-width;
-    margin: 0 auto;
+    @include size-center;
     padding: 5rem 0 1rem 0;
     main {
       #cards {
@@ -95,44 +87,6 @@ body {
           }
           &:hover {
             background-color: $select-color;
-          }
-        }
-      }
-    }
-  }
-}
-.dark {
-  background-image: $background-color-dark;
-  .header-container {
-    background-color:$nav-color-dark;
-    header {
-      nav {
-        color: $primary-color-dark;
-      }
-      .logo {
-        background-color: $primary-color-dark;
-        &:hover {
-          background-color: $select-color;
-        }
-      }
-    }
-  }
-  .container {
-    main {
-      #cards {
-        .card {
-          // Glass card
-          background-color: rgba(0, 0, 0, 0.63);
-          border-top: 1px solid rgba(255, 255, 255, 0.5);
-          // Glass card
-          .content {
-            color: $text-color;
-            .title {
-              border-bottom: 1px solid white;
-            }
-          }
-          &:hover {
-            background-color: $select-color-dark;
           }
         }
       }

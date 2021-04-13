@@ -1,6 +1,3 @@
-import "./style.scss"
-// import 'regenerator-runtime/runtime'
-
 const cards = document.getElementById('cards') as HTMLElement
 const body = document.body as HTMLElement
 const btn = document.getElementById('theme-toggler') as HTMLElement

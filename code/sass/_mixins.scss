@@ -1,0 +1,6 @@
+$content-width: 1024px;
+
+@mixin size-center {
+    max-width: $content-width;
+    margin: 0 auto;
+}

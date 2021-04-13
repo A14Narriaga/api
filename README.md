@@ -1,53 +1,44 @@
 # API App
- Implement a Website with and API using SASS and Typescript with Parcelv2.
+ Implement a Website with and API using SASS and Typescript with Parcel.
  The API that i use: https://breakingbadapi.com/
 
- # Parcel (Blender)
+# Parcel (Blender)
 Helps to compile all the code of the app and give 
 new files that will be understanding for the most 
 of the browsers.
 
-# For development
+## Install Parcel in our project (Yarn)
 - Install nodejs: https://nodejs.org/en/
 - Create a proyect.
 ```
-npm init -y
+yarn init -y
 ```
-- Install Parcelv2
+- Install Parcel
 ```
-npm install parcel@next
+yarn add -D parcel
 ```
-- Add browserslist in package.json:
-```
-  "name": "",
-  "version": "",
-  "description": "",
-  "browserslist": "> 0.2%",
-```
-- Add scripts in package.json:
+
+## Parcel for development
+- Add development script in package.json [ports front: 3000 to 3999 / back: 4000 to forward]:
 ```
 "scripts": {
-    "dev": "parcel code/index.html",
+    "dev": "parcel ./code/index.html -p 3001"
   },
 ```
-- Create the directory "code" and insert all the files to create the aplication. (.html, .sass, .ts)
-- npm run dev (Development).
-- Parcel create the "dist" directory and start a server.
-
-# For production
-- Delete de "dist" directory.
-- Create the directory "public" and insert all the source files (img, etc...).
-- Move the index.html to the root.
-  - Link the css and js file.
-  ```
-  <link rel="stylesheet" href="./public/app.css">
-  <script type="text/javascript" src="./public/app.js"></script>
-  ```
-  - Fix sources paths.
-- Add scripts in package.json:
+- Create the directory "code" and insert all the files and directories to create the aplication. (.html, .sass, .ts)
+- Run for development
 ```
-"scripts": {
-    "build": "parcel build ./code/app.ts"
+yarn run dev
+```
+- Parcel create the "dist" directory and start a server in the port 3001.
+
+## Parcel for production
+- Delete de "dist" directory.
+- Add production script in package.json:
+```
+ "scripts": {
+    "dev": "parcel ./code/index.html -p 3001",
+    "pro": "parcel build ./code/index.html && python ./build-script.py"
   },
 ```
 - Add targets in package.json:
@@ -58,4 +49,74 @@ npm install parcel@next
     }
   }
 ```
-- npm run build (For production)
+- yarn run pro
+
+# Python script
+Fix the erros in Parcel paths for production:
+```
+import pathlib
+import shutil
+
+htmlFile = open("public\index.html", "r")
+data = htmlFile.read()
+htmlFile.close()
+data = data.replace('src="/', 'src="public/')
+data = data.replace('href="/', 'href="public/')
+htmlFile = open("public\index.html", "w")
+htmlFile.write(data)
+htmlFile.close()
+shutil.move("public\index.html", "index.html")
+```
+
+# SASS notes
+- _example.scss (The _ means that parcel most not compile that file).
+- @import "example"; (Import a file).
+- _mixins.scss (All the SASS code repetitive)
+    - Content file mixins.scss
+    ```
+    @mixin container {
+        (repetitive code)
+    }
+    ```
+    - Import mixins.scss file
+    ```
+    @import "mixins";
+    @include container; (Inside the code)
+    ```
+
+# Git comands
+- Install git: https://git-scm.com/download
+- Open terminal.
+    - Write to confirm instalation:
+    ```
+    git
+    ```
+    - Configurate git:
+    ```
+    git config --global user.name "my_name" (local name)
+    git config --global user.email "my_email"
+    ```
+    - Clon repository:
+     ```
+    git clone url_of_repo
+    ```
+    - Add files in the directory
+    - Create '.gitignore' file in the root and add the directories or files that github will not save.
+    - Show status of the project:
+    ```
+    git status
+    ```
+    - Select file(s) to save in the repo:
+    ```
+    git add ./name_of_file (one file)
+    git add . (all the files)
+    ```
+    - Save locally files
+    ```
+    git commit -m "description_of_commit"
+    ```
+    - Save in GitHub
+    ```
+    git push
+    ```
+    - Login in terminal or web depending of the operative system.
