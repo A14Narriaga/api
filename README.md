@@ -9,13 +9,17 @@ of the browsers.
 
 ## Install Parcel in our project (Yarn)
 - Install nodejs: https://nodejs.org/en/
+- Install yarn
+```
+npm install --global yarn
+```
 - Create a proyect.
 ```
-yarn init -y
+npx yarn init -y
 ```
 - Install Parcel
 ```
-yarn add -D parcel
+npx yarn add -D parcel
 ```
 
 ## Parcel for development
